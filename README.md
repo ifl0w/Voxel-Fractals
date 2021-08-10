@@ -37,7 +37,7 @@ The camera is controlled with the following controls.
 
 ## Settings GUI
 
-The GUI is displayed in a separate window and shows profiling information, rendering settings, and the camera position and orientation. This window is opened on start and can be reopened with ``F12´´ if closed.
+The GUI is displayed in a separate window and shows profiling information, rendering settings, and the camera position and orientation. This window is opened on start and can be reopened with ``F12`` if closed.
 
 The most important part is the settings panel.
 In the first dropdown, the fractal can be selected.
@@ -45,13 +45,18 @@ In the first dropdown, the fractal can be selected.
 The update button forces a new traversal of the octree and extension of the leave nodes where necessary.
 If "Continuous Update" is selected, then such an update is triggered after any camera movement.
 
-The following three sliders can be used to tune the performance and visual quality.
-* **Distance Threshold:** How large a block should approximately appear on the screen.
-* **Distance Scale:** How fast the "Distance Threshold" decreases with distance from the camera.
-* **Rendered Nodes:** Maximum number of nodes that are rendered on the GPU. Random parts of the octree are not rendered if this limit is reached.
+The following three sliders can be used to tune the performance and visual quality:
+
+**Subdivision Threshold:** How large a block should approximately appear on the screen in pixels.
+
+**Distance Scale:** How fast the "Subdivision Threshold" decreases with distance from the camera.
+
+**Max. Octree Nodes:** Maximum number of nodes that are rendered on the GPU. Random parts of the octree are not rendered if this limit is exceeded.
 
 Finally, the reset button resets the three sliders and triggers a new update of the octree.
 A new terrain is also generated, in the case of the fractal terrain.
+
+![Settings Window](./images/screenshots/settings.png "Settings Window")
 
 **IMPORTANT** The performance depends heavily on the number of rendered nodes since every block is rendered as a single cube
 (no surface extraction is done). Hence, you should limit the number of rendered blocks if the performance degrades.
@@ -124,17 +129,17 @@ Unfortunately, these extensions would huge changes to the render engine.
 ## Screenshots
 
 ### Mandel Bulb
-![Configuration Panel](./images/screenshots/mandelbulb_1.png "Mandel Bulb 1")
-![Configuration Panel](./images/screenshots/mandelbulb_2.png "Mandel Bulb 2")
-![Configuration Panel](./images/screenshots/mandelbulb_3.png "Mandel Bulb 3")
+![Mandel Bulb 1](./images/screenshots/mandelbulb_1.png "Mandel Bulb 1")
+![Mandel Bulb 2](./images/screenshots/mandelbulb_2.png "Mandel Bulb 2")
+![Mandel Bulb 3](./images/screenshots/mandelbulb_3.png "Mandel Bulb 3")
 
 ### Mandel Brot
-![Configuration Panel](./images/screenshots/mandelbrot_1.png "Mandel Brot 1")
-![Configuration Panel](./images/screenshots/mandelbrot_2.png "Mandel Brot 2")
+![Mandel Brot 1](./images/screenshots/mandelbrot_1.png "Mandel Brot 1")
+![Mandel Brot 2](./images/screenshots/mandelbrot_2.png "Mandel Brot 2")
 
 ### Menger Sponge & Sierpinsky Pyramid
-![Configuration Panel](./images/screenshots/menger_1.png "Menger Sponge")
-![Configuration Panel](./images/screenshots/sierpinski_1.png "Sierpinsky Pyramid")
+![Menger Sponge](./images/screenshots/menger_1.png "Menger Sponge")
+![Sierpinski Pyramid](./images/screenshots/sierpinski_1.png "Sierpinski Pyramid")
 
 ### Terrain
-![Configuration Panel](./images/screenshots/terrain_1.png "Terrain")
+![Terrain](./images/screenshots/terrain_1.png "Terrain")
